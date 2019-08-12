@@ -1,336 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#ded6d6"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp"
+        app:elevation="16dp">
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin"
-            android:background="@android:color/white"
-            android:elevation="16dp"
-            android:padding="16dp"
-            app:cardCornerRadius="16dp">
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/currency_name_tv_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="USD" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="6dp"
-                    android:paddingTop="6dp"
-                    android:text="USD"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    android:text="15m"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/m_tv_id"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_weight="3"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    tools:text="1234.56 " />
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="15m "
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/m1_tv_id"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        tools:text="1234.56 " />
-
-                    <TextView
-                        android:id="@+id/symbol1_tv1_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="6dp"
-                        android:textColor="#5d5d5d"
-                        tools:text=" $" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/symbol_tv1_id"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Buy "
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/buy1_tv_id"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        tools:text="1234.56 " />
-
-                    <TextView
-                        android:id="@+id/symbol1_tv2_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="6dp"
-                        android:textColor="#5d5d5d"
-                        tools:text=" $" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Sell "
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/sell1_tv_id"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        tools:text="1234.56 " />
-
-                    <TextView
-                        android:id="@+id/symbol1_tv3_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="6dp"
-                        android:textColor="#5d5d5d"
-                        tools:text=" $" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Last "
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/last1_tv_id"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        tools:text="1234.56 " />
-
-                    <TextView
-                        android:id="@+id/symbol1_tv4_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="6dp"
-                        android:textColor="#5d5d5d"
-                        tools:text=" $" />
-                </LinearLayout>
+                    android:paddingLeft="6dp"
+                    android:textColor="#5d5d5d"
+                    tools:text=" $" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin"
-            android:background="@android:color/white"
-            android:elevation="16dp"
-            android:padding="16dp"
-            app:cardCornerRadius="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="6dp"
-                    android:paddingTop="6dp"
-                    android:text="INR"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    android:text="Buy"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/buy_tv_id"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_weight="3"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    tools:text="1234.56 " />
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="15m "
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/m2_tv_id"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        tools:text="1234.56 " />
-
-                    <TextView
-                        android:id="@+id/symbol2_tv4_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="6dp"
-                        android:textColor="#5d5d5d"
-                        tools:text=" $" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/symbol_tv2_id"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/buy"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Buy "
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/buy2_tv_id"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        tools:text="1234.56 " />
-
-                    <TextView
-                        android:id="@+id/symbol2_tv1_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="6dp"
-                        android:textColor="#5d5d5d"
-                        tools:text=" $" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/sell"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Sell "
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/sell2_tv_id"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        tools:text="1234.56 " />
-
-                    <TextView
-                        android:id="@+id/symbol2_tv2_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="6dp"
-                        android:textColor="#5d5d5d"
-                        tools:text=" $" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Last "
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/last2_tv_id"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp"
-                        tools:text="1234.56 " />
-
-                    <TextView
-                        android:id="@+id/symbol2_tv3_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="6dp"
-                        android:textColor="#5d5d5d"
-                        tools:text=" $" />
-                </LinearLayout>
+                    android:paddingLeft="6dp"
+                    android:textColor="#5d5d5d"
+                    tools:text=" $" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
-</ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sell"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sell_tv_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    tools:text="1234.56 " />
+
+                <TextView
+                    android:id="@+id/symbol_tv3_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6dp"
+                    android:textColor="#5d5d5d"
+                    tools:text=" $" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Last"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/last_tv_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    tools:text="1234.56 " />
+
+                <TextView
+                    android:id="@+id/symbol_tv4_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6dp"
+                    android:textColor="#5d5d5d"
+                    tools:text=" $" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
